@@ -1,1 +1,1 @@
-# smitearific
+# Smitearific
