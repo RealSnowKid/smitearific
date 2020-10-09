@@ -1,0 +1,22 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+// Bootstrap
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/bootstrap';
+
+// Variables
+@import 'variables';
+
+// Components
+@import './components/navbar';
+
+body {
+    font-family: $font-family-sans-serif;
+    background-color: $lightblack;
+    color: $white;
+}
+
+button, a {
+    outline: none;
+}

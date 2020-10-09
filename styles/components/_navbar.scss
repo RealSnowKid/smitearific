@@ -1,0 +1,67 @@
+.svgLogo {
+    width: 60px;
+    height: auto;
+}
+
+.navContainer {
+    background-color: $black;
+}
+
+.navText {
+    font-size: 2rem;
+    color: white !important;
+
+    &:hover {
+        // color: $gray !important;
+        background-color: #1c1f25 !important;
+    }
+
+    &.active {
+        font-weight: bold;
+        
+    }
+}
+
+.brand {
+    color: white;
+
+    &:hover {
+        color: $gray;
+        filter: contrast(78%);
+    }
+}
+
+.navAvatar {
+    color: white;
+    font-size: 4rem;
+
+    &:hover {
+        color: $gray;
+    }
+}
+
+.dropdown-toggle {
+    &::after {
+        display: none;
+    }
+}
+
+.dropdown-menu, .dropdown-menu-right {
+    @media only screen and (max-width: 460px) {
+        right: auto !important;
+        min-width: 90vw !important;
+    }
+}
+
+.dropdownItem {
+    font-size: 1.4rem;
+}
+
+.navLinkContainer {
+    margin-left: ($spacer * 6) !important;
+
+    @include media-breakpoint-down(lg) {
+        margin-left: auto !important;
+        // text-align: center;
+    }
+}
