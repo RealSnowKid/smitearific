@@ -28,13 +28,13 @@ function Navigation() {
                 setGods(false);
                 break;
 
-            case '/blog/general-tier-list':
+            case '/general-tier-list':
                 setHome(false);
                 setgTierlist(true);
                 setGods(false);
                 break;
 
-            case '/blog/gods':
+            case '/gods':
                 setHome(false);
                 setgTierlist(false);
                 setGods(true);
@@ -55,10 +55,10 @@ function Navigation() {
                     <Nav.Link active={home} className="navText" href="/blog">Home</Nav.Link>
                 </Nav.Item>
                 <Nav.Item className="navItem">
-                    <Nav.Link active={tierlist} className="navText" href="/blog/general-tier-list">General Tier List</Nav.Link>
+                    <Nav.Link active={tierlist} className="navText" href="/general-tier-list">General Tier List</Nav.Link>
                 </Nav.Item>
                 <Nav.Item className="navItem">
-                    <Nav.Link active={gods} className="navText" href="/blog/gods">Gods</Nav.Link>
+                    <Nav.Link active={gods} className="navText" href="/gods">Gods</Nav.Link>
                 </Nav.Item>
             </Nav>
         </>

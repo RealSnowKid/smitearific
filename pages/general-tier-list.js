@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Navbar from '../../components/Navbar';
-import Navigation from '../../components/Navigation'
+import Navbar from '../components/Navbar';
+import Navigation from '../components/Navigation'
 
-export default function Gods() {
+export default function GeneralTierList() {
     const { asPath } = useRouter()
     return (
         <>
