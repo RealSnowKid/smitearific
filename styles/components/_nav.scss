@@ -1,0 +1,12 @@
+.navLinksContainer {
+    background-color: $darkblack;
+    border-bottom: 1px solid $darkestblue;
+}
+
+.navItem {
+    
+    @media only screen and (max-width: 486px) {
+        width: 100%;
+        text-align: right;
+    }
+}

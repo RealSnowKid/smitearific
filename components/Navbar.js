@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Img from 'react-optimized-image';
 import Logo from '../images/logo.svg';
@@ -55,7 +55,7 @@ function NavBar() {
     return (
         <>
             <Navbar expand="md" className="d-flex navContainer">
-                <div className="d-lg-flex mx-auto align-items-center justify-content-between">
+                <div className="d-lg-flex mx-auto align-items-center">
                     <Navbar.Brand className="" href="/blog">
                         <div className="d-flex align-items-center brand">
                             <Img className="svgLogo ml-1" src={Logo}></Img>

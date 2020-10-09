@@ -5,6 +5,7 @@
 
 .navContainer {
     background-color: $black;
+    border-bottom: 1px solid $darkestblue;
 }
 
 .navText {
@@ -62,6 +63,13 @@
 
     @include media-breakpoint-down(lg) {
         margin-left: auto !important;
-        // text-align: center;
+    }
+}
+
+.nav-link {
+    padding: 1rem 1rem !important;
+    
+    @include media-breakpoint-down(md) {
+        padding: 0.5rem 1rem !important;
     }
 }
