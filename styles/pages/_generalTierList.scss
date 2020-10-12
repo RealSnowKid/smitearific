@@ -1,0 +1,58 @@
+.tierListDiv {
+    // display: flex;
+    // flex-wrap: wrap;
+    border: 2px solid $darkgray;
+    border-radius: 21px;
+    width: 100%;
+    align-self: center;
+    margin-top: 2rem;
+
+    h3 {
+        font-weight: bold;
+        align-self: center;
+    }
+
+    hr {
+        border: 1px $white solid;
+        margin-top: -1rem;
+    }
+}
+
+.jumpLinks {
+    align-self: center;
+    margin-top: 2rem;
+
+    a {
+        color: $gold;
+
+        &:hover {
+            border-bottom: 4px $gold dotted;
+            text-decoration: none;
+        }
+    }
+}
+
+.tierLetters {
+    h2 {
+        color: $gold;
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+}
+
+.godIcon {
+    width: 72px;
+    margin: 0.4rem 0.6rem;
+    height: auto;
+    border: 2px $white solid;
+    border-radius: 50%;
+}
+
+.tierDiv {
+    border-right: 1px $white solid;
+    width: 33.33%;
+    
+    &:last-child {
+        border-right: none;
+    }
+}
