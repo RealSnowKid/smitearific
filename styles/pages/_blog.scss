@@ -1,0 +1,73 @@
+.bigImgThumb {
+    max-height: 550px !important;
+    width: auto !important;
+}
+
+.smallImgThumb {
+    max-height: 260px !important;
+    width: auto !important;
+}
+
+.article {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+
+    &:hover .articleTitle {
+        color: lightgray;
+        text-decoration: none;
+    }
+}
+
+.articleBoxBig {
+    background-color: transparent;
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.articleBoxSmall {
+    background: transparent; 
+    height: 260px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:first-child {
+        margin-bottom: 30px;
+    }
+}
+
+.articleBoxLong {
+    width: 100%;
+    border: 2px $gray solid;
+}
+
+.articleTitle {
+    margin-top: auto;
+    margin-right: auto;
+    word-wrap: normal;
+}
+
+.readIcon {
+    font-size: 2rem;
+    margin-right: 0.8rem;
+}
+
+.smallReadIcon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.smallReadText {
+    word-wrap: none;
+}
+
+.divWhite {
+    padding: 2rem;
+    background-color: $white;
+    color: $black;
+}

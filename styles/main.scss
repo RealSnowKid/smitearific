@@ -12,6 +12,9 @@
 @import './components/navbar';
 @import './components/nav';
 
+// Pages
+@import './pages/blog';
+
 body {
     font-family: $font-family-sans-serif;
     background-color: $lightblack;
