@@ -6,7 +6,17 @@ module.exports = withPlugins([
   [optimizedImages, {
     /* config for next-optimized-images */
   }],
-
+  {
+    async redirects() {
+      return [
+        {
+          source: '/',
+          destination: '/blog',
+          permanent: true
+        }
+      ]
+    }
+  }
   // your other plugins here
 
 ]);
