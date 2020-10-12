@@ -26,8 +26,16 @@
 .articleBoxBig {
     background-color: transparent;
     height: 550px;
-    background-size: cover;
+    background-size: auto 548px;
     background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 4px 4px $darkblack;
+
+    h2 {
+        @media screen and (max-width: 1050px){
+            font-size: 1.7rem;
+        }
+    }
 }
 
 .articleBoxSmall {
@@ -35,22 +43,40 @@
     height: 260px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 4px 4px $darkblack;
 
     &:first-child {
         margin-bottom: 30px;
     }
+
+    h4 {
+        margin-top: auto;
+        margin-right: auto;
+
+        @media screen and (max-width: 1050px){
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .articleBoxLong {
-    width: 100%;
-    border: 2px $gray solid;
+    width: 70vw;
+    height: 380px;
+    background-color: $lightblack;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 4px 4px $gray;
+    margin-bottom: 1rem;
+
+    h2 {
+        margin-top: auto;
+        margin-right: auto;
+    }
 }
 
-.articleTitle {
-    margin-top: auto;
-    margin-right: auto;
-    word-wrap: normal;
-}
 
 .readIcon {
     font-size: 2rem;
