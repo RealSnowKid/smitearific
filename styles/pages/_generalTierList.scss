@@ -1,6 +1,4 @@
 .tierListDiv {
-    // display: flex;
-    // flex-wrap: wrap;
     border: 2px solid $darkgray;
     border-radius: 21px;
     width: 100%;
@@ -16,11 +14,25 @@
         border: 1px $white solid;
         margin-top: -1rem;
     }
+
+    &:last-child {
+        margin-bottom: 20vh;
+    }
 }
 
 .jumpLinks {
-    align-self: center;
-    margin-top: 2rem;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    margin-top: 1rem;
+    height: 6rem;
+    background-color: $lightblack;
+    justify-content: center;
+
+    h4 {
+        align-self: center;
+    }
 
     a {
         color: $gold;
@@ -55,4 +67,11 @@
     &:last-child {
         border-right: none;
     }
+}
+
+.anchor{
+    display: block;
+    height: 35vh; /* 50% viewport height */
+    margin-top: -35vh;
+    visibility: hidden;
 }

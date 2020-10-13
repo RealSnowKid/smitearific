@@ -8,7 +8,10 @@ export default function GeneralTierList() {
             <Navbar />
             <Navigation />
             <div className="d-flex w-75 mx-auto flex-column">
-                <h4 className="jumpLinks">Jump to: <a href="#solo">Solo</a> • <a href="#jung">Jungle</a> • <a href="#mid">Mid</a> • <a href="#adc">Hunter</a> • <a href="#supp">Support</a></h4>
+                <div className="jumpLinks">
+                    <h4>Jump to: <a href="#solo">Solo</a> • <a href="#jung">Jungle</a> • <a href="#mid">Mid</a> • <a href="#adc">Hunter</a> • <a href="#supp">Support</a></h4>
+                </div>
+                <span className="anchor" id="solo"></span>
                 <div className="container tierListDiv">
                     <div className="d-flex justify-content-center">
                         <h2 className="font-weight-bolder">SOLO LANE</h2>
@@ -63,6 +66,7 @@ export default function GeneralTierList() {
                         </div>
                     </div>
                 </div>
+                <span className="anchor" id="jung"></span>
                 <div className="container tierListDiv">
                     <div className="d-flex justify-content-center">
                         <h2 className="font-weight-bolder">JUNGLE</h2>
@@ -111,6 +115,7 @@ export default function GeneralTierList() {
                         </div>
                     </div>
                 </div>
+                <span className="anchor" id="mid"></span>
                 <div className="container tierListDiv">
                     <div className="d-flex justify-content-center">
                         <h2 className="font-weight-bolder">MID LANE</h2>
@@ -163,6 +168,7 @@ export default function GeneralTierList() {
                         </div>
                     </div>
                 </div>
+                <span className="anchor" id="adc"></span>
                 <div className="container tierListDiv">
                     <div className="d-flex justify-content-center">
                         <h2 className="font-weight-bolder">HUNTER</h2>
@@ -205,6 +211,7 @@ export default function GeneralTierList() {
                         </div>
                     </div>
                 </div>
+                <span className="anchor" id="supp"></span>
                 <div className="container tierListDiv">
                     <div className="d-flex justify-content-center">
                         <h2 className="font-weight-bolder">SUPPORT</h2>
