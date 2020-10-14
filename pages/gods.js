@@ -8,7 +8,7 @@ export default function Gods() {
         <>
             <Navbar />
             <Navigation />
-            <div className="card-deck mx-auto">
+            <div className="card-deck mx-auto mb-4">
                 <Link href="/gods/achilles">
                     <div className="card godCard">
                         <div className="godIcon">
@@ -209,7 +209,7 @@ export default function Gods() {
                         <div className="godIcon">
                             <img src="https://web2.hirez.com/smite/god-icons/artio.jpg" />
                         </div>
-                        <div className="card-body text-center">
+                        <div className="card-body text-center mb-n2">
                             <div className="d-flex">
                                 <img className="type" src="https://i.imgur.com/vISTzOG.png" />
                                 <img className="type" src="https://i.imgur.com/zlZGWRs.png" />
