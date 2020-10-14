@@ -41,7 +41,7 @@ function Navigation() {
                 break;
 
             default:
-                setHome(true);
+                setHome(false);
                 setgTierlist(false);
                 setGods(false);
                 break;
