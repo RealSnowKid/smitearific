@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import Navbar from '../components/Navbar.js';
 import NavigationEsports from '../components/navigationEsports.js';
+import ScrollArrow from '../components/scrollArrow.js';
 
 export default function Builds() {
     return (
         <>
             <Navbar />
             <NavigationEsports />
+            <ScrollArrow />
             <div className="card-deck mx-auto mb-4">
                 <Link href="/builds/achilles">
                     <div className="card godCard">

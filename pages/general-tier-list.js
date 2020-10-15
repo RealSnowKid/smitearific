@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Navigation from '../components/Navigation'
+import ScrollArrow from '../components/scrollArrow.js';
 
 export default function GeneralTierList() {
     return (
         <>
             <Navbar />
             <Navigation />
+            <ScrollArrow />
             <div className="d-flex w-75 mx-auto flex-column">
                 <div className="jumpLinks">
                     <h4>Jump to: <a href="#solo">Solo</a> • <a href="#jung">Jungle</a> • <a href="#mid">Mid</a> • <a href="#adc">Hunter</a> • <a href="#supp">Support</a></h4>

@@ -2,13 +2,14 @@ import React from 'react';
 import Navbar from '../../components/Navbar.js';
 import Navigation from '../../components/Navigation';
 import { Tabs, Tab } from 'react-bootstrap';
+import ScrollArrow from '../../components/scrollArrow.js';
 
 export default function GodPage() {
     return (
         <>
             <Navbar />
             <Navigation />
-
+            <ScrollArrow />
             <div className="containter mx-auto godInfo">
                 <div className="row">
                     <div className="godIcon">

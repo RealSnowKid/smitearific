@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar.js';
 import NavigationEsports from '../components/navigationEsports.js';
-import ScrollArrow from '../components/scrollArrow.js'
+import ScrollArrow from '../components/scrollArrow.js';
 
 export default function Esports() {
     return (

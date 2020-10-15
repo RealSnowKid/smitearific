@@ -8,12 +8,14 @@ import Test from '../images/test_image_1.jpg';
 import Test2 from '../images/test_image_2.jpg';
 import Test3 from '../images/test_image_3.jpg';
 import Test4 from '../images/test_image_4.jpg';
+import ScrollArrow from '../components/scrollArrow.js';
 
 export default function Blog() {
     return (
         <>
             <Navbar />
             <Navigation />
+            <ScrollArrow />
             <div className="row mx-auto mt-3 w-75">
                 <div className="col-8">
                     <a className="article" href="/blog/how-to-win-lane">

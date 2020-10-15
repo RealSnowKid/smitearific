@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Navigation from '../components/Navigation'
+import ScrollArrow from '../components/scrollArrow.js';
 
 export default function Gods() {
     return (
         <>
             <Navbar />
             <Navigation />
+            <ScrollArrow />
             <div className="card-deck mx-auto mb-4">
                 <Link href="/gods/achilles">
                     <div className="card godCard">
