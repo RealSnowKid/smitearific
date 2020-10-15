@@ -12,6 +12,7 @@ function NavBar() {
     const [blog, setBlog] = useState(false);
     const [godstats, setgGodstats] = useState(false);
     const [esports, setEsports] = useState(false);
+    var regex = /builds/g;
 
     const handlePath = () => setPath(asPath);
 
@@ -32,13 +33,31 @@ function NavBar() {
                 setEsports(false);
                 break;
 
-            case '/godstats':
+            case '/god-stats':
                 setBlog(false);
                 setgGodstats(true);
                 setEsports(false);
                 break;
 
-            case '/esports':
+            case '/esports-stats':
+                setBlog(false);
+                setgGodstats(false);
+                setEsports(true);
+                break;
+
+            case '/esports-tier-list':
+                setBlog(false);
+                setgGodstats(false);
+                setEsports(true);
+                break;
+
+            case '/builds':
+                setBlog(false);
+                setgGodstats(false);
+                setEsports(true);
+                break;
+
+            case '/builds/[godid]':
                 setBlog(false);
                 setgGodstats(false);
                 setEsports(true);
@@ -64,8 +83,8 @@ function NavBar() {
                     </Navbar.Brand>
                     <Nav className="navLinkContainer">
                         <Nav.Link active={blog} id="blog" className="navText" href="/blog">Blog</Nav.Link>
-                        <Nav.Link active={godstats} id="godStats" className="navText" href="/godstats">God Stats</Nav.Link>
-                        <Nav.Link active={esports} id="esports" className="navText" href="/esports">Esports Stats</Nav.Link>
+                        <Nav.Link active={godstats} id="godStats" className="navText" href="/god-stats">God Stats</Nav.Link>
+                        <Nav.Link active={esports} id="esports" className="navText" href="/esports-stats">Esports Stats</Nav.Link>
                     </Nav>
                 </div>
                 <NavDropdown alignRight={true} className="dorpdownContainer" title={<FontAwesomeIcon className="navAvatar" icon={faUserCircle} />}>

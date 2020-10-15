@@ -11,11 +11,13 @@
 // Components
 @import './components/navbar';
 @import './components/nav';
+@import './components/scrollArrow';
 
 // Pages
 @import './pages/blog';
-@import './pages/generalTierList';
+@import './pages/tierList';
 @import './pages/gods';
+@import './pages/builds';
 
 body {
     font-family: $font-family-sans-serif;
