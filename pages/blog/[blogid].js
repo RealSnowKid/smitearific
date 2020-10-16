@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
-import Navbar from '../components/Navbar.js';
-import NavigationEsports from '../components/navigationEsports.js';
-import ScrollArrow from '../components/scrollArrow.js';
+import Navbar from '../../components/Navbar.js';
+import NavigationEsports from '../../components/navigationEsports.js';
+import ScrollArrow from '../../components/scrollArrow.js';
 
-export default function Esports() {
+export default function Blog() {
     const { asPath } = useRouter()
     return (
         <>

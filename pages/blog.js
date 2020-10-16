@@ -18,7 +18,7 @@ export default function Blog() {
             <ScrollArrow />
             <div className="row mx-auto mt-3 w-75">
                 <div className="col-8">
-                    <a className="article" href="/blog/how-to-win-lane">
+                    <a className="article" href="/blog/how-to-win-lane-as-hachiman">
                         <div className="card articleBoxBig" style={{ backgroundImage: `url(${Test})` }}>
                             <div className="card-body d-flex align-items-end">
                                 <h2 className="card-title mr-auto articleTitle">How to Win Lane as Hachiman</h2>
@@ -31,7 +31,7 @@ export default function Blog() {
                     </a>
                 </div>
                 <div className="col-4">
-                    <a className="article" href="/blog/how-to-spoon">
+                    <a className="article" href="/blog/how-to-win-lane-as-hachiman">
                         <div className="card articleBoxSmall" style={{ backgroundImage: `url(${Test2})` }}>
                             <div className="card-body d-flex align-items-start flex-column">
                                 <div className="d-flex ml-auto">
@@ -42,7 +42,7 @@ export default function Blog() {
                             </div>
                         </div>
                     </a>
-                    <a className="article" href="/blog/how-to-spoon">
+                    <a className="article" href="/blog/article-title">
                         <div className="card articleBoxSmall" style={{ backgroundImage: `url(${Test3})` }}>
                             <div className="card-body d-flex align-items-start flex-column">
                                 <div className="d-flex ml-auto">
@@ -58,7 +58,7 @@ export default function Blog() {
 
             <div className="d-flex flex-wrap divWhite">
                 <div className="row mx-auto">
-                    <a className="article" href="/blog/how-to-win-lane">
+                    <a className="article" href="/blog/the-best-team-composition-to-pick-in-ranked">
                         <div className="card articleBoxLong" style={{ backgroundImage: `url(${Test4})` }}>
                             <div className="card-body d-flex align-items-end flex-column">
                                 <h2 className="card-title mr-auto articleTitleLong">The Best Team Composition To Pick in Ranked</h2>
@@ -77,10 +77,10 @@ export default function Blog() {
                     </a>
                 </div>
                 <div className="row mx-auto">
-                    <a className="article" href="/blog/how-to-win-lane">
+                    <a className="article" href="/blog/when-to-pick-ullr-in-this-meta">
                         <div className="card articleBoxLong" style={{ backgroundImage: `url(${Test3})` }}>
                             <div className="card-body d-flex align-items-end flex-column">
-                                <h2 className="card-title mr-auto articleTitleLong">Why and When to Pick Ullr in this Meta</h2>
+                                <h2 className="card-title mr-auto articleTitleLong">When to Pick Ullr in this Meta</h2>
                                 <div className="d-flex align-items-start mr-auto">
                                     <div className="d-flex mr-5 ">
                                         <FontAwesomeIcon className="readIcon" icon={faClock} />
@@ -96,7 +96,7 @@ export default function Blog() {
                     </a>
                 </div>
                 <div className="row mx-auto">
-                    <a className="article" href="/blog/how-to-win-lane">
+                    <a className="article" href="/blog/how-to-snowball-the-early-game-as-thanatos">
                         <div className="card articleBoxLong" style={{ backgroundImage: `url(${Test2})` }}>
                             <div className="card-body d-flex align-items-end flex-column">
                                 <h2 className="card-title mr-auto articleTitleLong">How to Snowball the Early Game as Thanatos</h2>

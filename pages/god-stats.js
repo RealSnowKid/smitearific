@@ -8,7 +8,7 @@ export default function GodStats() {
         <>
             <Navbar />
             <ScrollArrow />
-            <p>Hello, I'm the {asPath} page</p>
+            <p>This is the {asPath} page</p>
         </>
     )
 }
