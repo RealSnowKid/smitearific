@@ -12,7 +12,6 @@ function NavBar() {
     const [blog, setBlog] = useState(false);
     const [godstats, setgGodstats] = useState(false);
     const [esports, setEsports] = useState(false);
-    var regex = /builds/g;
 
     const handlePath = () => setPath(asPath);
 
@@ -64,7 +63,7 @@ function NavBar() {
                 break;
 
             default:
-                setBlog(true);
+                setBlog(false);
                 setgGodstats(false);
                 setEsports(false);
                 break;
