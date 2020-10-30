@@ -3,7 +3,7 @@
 ## About The Project
 > The project itself is a website, that helps SMITE players get game statistics, informational articles, esports statistics and more so that they can become better at the game.
 > * The front-end is done via ReactJS
-> * The back-end is done utilizing Spring and Payara Micro Community
+> * The back-end is done utilizing Spring
 
 ## Technologies
 __SMITEARIFIC__ utilizes a number of frameworks and open-source technologies to work:
