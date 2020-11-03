@@ -1,0 +1,147 @@
+.tooltip {
+    
+    .tooltip-inner {
+        background-color: $darkblack;
+        max-width: 500px;
+    }
+}
+
+.godNfoBuilds {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+
+    .abilityIcon {
+        border: 1px $white solid;
+    }
+}
+
+.buildAndStats{
+    width: 60%;
+    flex-wrap: wrap;
+
+    h2 {
+        margin: 0.5rem 0 0.5rem 1.2rem;
+        
+        &::after {
+            display:block;
+            content: "";
+            position: relative;
+            top: 0.5rem;
+            left: -1.2rem;
+            height: 1px;
+            width: calc(100% + 1.2rem);
+            border-bottom: 1px solid $white;
+          }
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.15rem;
+    }
+
+    .godBuildStats {
+        margin-top: 1rem;
+        border: 1px $white solid;
+    }
+
+    .godBuildRelics {
+        width: 34%;
+        border: 1px $white solid;
+
+        .relicMargin {
+            margin: 1.6rem auto 0.8rem auto;
+        }
+
+        .relic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .relicIcon {
+                height: 6rem;
+                width: 6rem;
+                border-radius: 21px;
+                overflow: hidden;
+                border: 1px $white solid;
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+            
+            &:first-child {
+                margin-right: -1.8rem;
+            }
+
+            &:last-child {
+                margin-left: -1.8rem;
+            }
+        }
+    }
+
+    .godBuildMatchups {
+        width: 64%;
+        border: 1px $white solid;
+
+        .marginator {
+            margin: 1.6rem auto 0.8rem auto;
+        }
+
+        .god {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .godIcon {
+                height: 6rem;
+                width: 6rem;
+                border-radius: 21px;
+                overflow: hidden;
+                border: 1px $white solid;
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            h5 {
+                color: $red;
+            }
+        }
+    }
+
+    .build {
+        margin-top: 1rem;
+        border: 1px $white solid;
+
+        .marginator {
+            margin: 1.6rem auto 0.8rem auto;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .itemIcon {
+                height: 8rem;
+                width: 8rem;
+                border-radius: 21px;
+                overflow: hidden;
+                border: 1px $white solid;
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

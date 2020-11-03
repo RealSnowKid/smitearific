@@ -31,7 +31,7 @@ export default function GodPage() {
                 </div>
             </div>
 
-            <div className="container mx-auto abilities mb-3">
+            <div className="d-flex flex-column mx-auto abilities mb-3">
                 <h2>Abilities</h2>
                 <Tabs fill defaultActiveKey="passive" id="uncontrolled-tab-example" className="mt-4">
                     <Tab className="ml-2 mr-2 mb-2 mt-5" eventKey="passive" title={<img className="abilityIcon" src="https://web2.hirez.com/smite/god-abilities/gift-of-the-gods.jpg" />}>
