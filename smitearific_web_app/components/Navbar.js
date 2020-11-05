@@ -18,7 +18,7 @@ function NavBar() {
     useEffect(() => {
         window.addEventListener('load', handlePath);
         handlePage();
-        console.log(path);
+        // console.log(path);
         return () => {
             window.removeEventListener('load', handlePath);
         };
