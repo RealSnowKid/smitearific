@@ -32,6 +32,18 @@ function NavBar() {
                 setEsports(false);
                 break;
 
+            case '/general-tier-list':
+                setBlog(true);
+                setgGodstats(false);
+                setEsports(false);
+                break;
+
+            case '/gods':
+                setBlog(true);
+                setgGodstats(false);
+                setEsports(false);
+                break;
+
             case '/god-stats':
                 setBlog(false);
                 setgGodstats(true);
