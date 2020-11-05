@@ -1,44 +1,73 @@
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Navbar from '../components/Navbar.js';
 import ScrollArrow from '../components/scrollArrow.js';
 import BootstrapTable from 'react-bootstrap-table-next';
+import axios from "axios";
+import GodsService from '../services/GodsService';
 
 export default function GodStats() {
-    const { asPath } = useRouter()
-    const products = [{
-        "id": 1,
-        "name": "Name 1",
-        "price": 1.50,
-    }, {
-        "id": 2,
-        "name": "Name 2",
-        "price": 3.00,
-    }, {
-        "id": 3,
-        "name": "Name 3",
-        "price": 10.00,
-    }, {
-        "id": 4,
-        "name": "Name 4",
-        "price": 9.99,
-    }]
+    const { asPath } = useRouter();
+    const [godData, setGodData] = useState([]);
+
+    useEffect(() => {
+        GodsService.GetGods()
+            .then(
+                response => {
+                    setGodData(response.data._embedded.godses);
+                }
+            )
+    }, [])
+
     const columns = [{
-        dataField: 'id',
-        text: 'Product ID',
+        dataField: 'god',
+        text: 'God',
         sort: true
     }, {
-        dataField: 'name',
-        text: 'Product Name',
+        dataField: 'winRate',
+        text: 'Win Rate',
         sort: true
     }, {
-        dataField: 'price',
-        text: 'Product Price',
+        dataField: 'prevWinRate',
+        text: 'Previous Win Rate',
+        sort: true
+    }, {
+        dataField: 'pickRate',
+        text: 'Pick Rate',
+        sort: true
+    }, {
+        dataField: 'prevPickRate',
+        text: 'Previous Pick Rate',
+        sort: true
+    }, {
+        dataField: 'banRate',
+        text: 'Ban Rate',
+        sort: true
+    }, {
+        dataField: 'prevBanRate',
+        text: 'Previous Ban Rate',
+        sort: true
+    }, {
+        dataField: 'pandBRate',
+        text: 'Pick and Ban Rate',
+        sort: true
+    }, {
+        dataField: 'prevPAndBRate',
+        text: 'Previous Pick and Ban Rate',
+        sort: true
+    }, {
+        dataField: 'role',
+        text: 'Role',
+        sort: true
+    }, {
+        dataField: 'secondaryRole',
+        text: 'Secondary Role',
         sort: true
     }];
 
     const defaultSorted = [{
-        dataField: 'name',
-        order: 'desc'
+        dataField: 'god',
+        order: 'asc'
     }];
     return (
         <>
@@ -47,10 +76,9 @@ export default function GodStats() {
             <p>This is the {asPath} page</p>
 
             <BootstrapTable
-                className="text-white"
                 bootstrap4
-                keyField="id"
-                data={products}
+                keyField="god"
+                data={godData}
                 columns={columns}
                 defaultSorted={defaultSorted}
             />
