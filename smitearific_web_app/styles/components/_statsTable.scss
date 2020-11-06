@@ -1,0 +1,76 @@
+.tableContainer {
+    width: 60%;
+    margin: 2rem auto auto auto;
+
+    .godStatsIcon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin: auto auto auto 1.2rem;
+    }
+
+    .roleStatsIcon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+
+    .react-bootstrap-table table {
+        color: $white;
+        
+        tr{
+                        
+            &:first-child {
+                border-top-left-radius: 21px;
+                border-top-right-radius: 21px;
+            }
+        }
+    }
+
+    .search-label {
+        width: 36%;
+
+        input {
+            padding: 1.6rem 0.5rem;
+            border: 2px solid $gold;
+            border-radius: 20px;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .btn-group {
+        .btn-light {
+
+            &:first-child {
+                border-radius: 20px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
+            &:last-child {
+                border-radius: 20px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+
+            &:active {
+                border-color: $gold;
+            }
+
+            &:focus {
+                background-color: $white;
+                border-color: $gold;
+                box-shadow: 0 0 0 0.2rem rgba(191, 155, 48, 0.8);
+            }
+
+            &:hover {
+                background-color: $white;
+                border-color: $gold;
+                box-shadow: 0 0 0 0.2rem rgba(191, 155, 48, 0.8);
+            }
+        }
+    }
+}
