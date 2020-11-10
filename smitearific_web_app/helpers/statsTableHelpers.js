@@ -24,6 +24,36 @@ function ProperGodNames(response) {
     }
 }
 
+function NameToSource(name) {
+    const link = "https://web2.hirez.com/smite/god-icons/";
+    const extention = ".jpg";
+    let source = "";
+    const regex = /[A-Z].*[A-Z].*/g;
+
+    switch (name) {
+        case "Ah Muzen Cab":
+            source = link + "ah-muzen-cab" + extention;
+            break;
+
+        case "Chang'e":
+            source = link + "change" + extention;
+            break;
+
+        default:
+            if (name.match(regex)) {
+                // response.data._embedded.godses[i].god = element.god.match(/[A-Z][a-z]+|[0-9]+/g).join("-");
+                source = link + name.match(/[A-Z][a-z]+|[0-9]+/g).join("-").toLowerCase() + extention;
+            }
+            else {
+                source = link + name.toLowerCase() + extention;
+            }
+            break;
+    }
+
+    return source;
+}
+
 export default {
-    ProperGodNames
+    ProperGodNames,
+    NameToSource
 }
