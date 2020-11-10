@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar.js';
+import NavigationEsports from '../components/navigationEsports.js';
 import ScrollArrow from '../components/scrollArrow.js';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -80,6 +81,7 @@ export default function EsportsStats() {
     return (
         <>
             <Navbar />
+            <NavigationEsports />
             <ScrollArrow />
 
             <div className="tableContainer">
