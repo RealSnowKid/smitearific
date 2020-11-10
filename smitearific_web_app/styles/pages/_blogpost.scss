@@ -1,0 +1,42 @@
+.articleBanner {
+    width: calc(100% - 8px);
+    margin: 0 auto 1rem auto;
+    height: 400px;
+    background-color: $lightblack;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    box-shadow: 0 0 4px 4px $gray;
+
+    h2 {
+        margin: auto;
+    }
+}
+
+.blogPostContainer {
+    width: 60%;
+    margin: 0 auto;
+
+    & * {
+        margin-bottom: 1.4rem;
+    }
+
+    & p {
+        font-size: 1.1rem;
+    }
+    
+    & ol {
+        padding-left: 1.3rem;
+
+        & li {
+            font-weight: bold;
+            font-size: larger;
+            margin-bottom: 0.2rem;
+        }
+
+        & p {
+            margin-left: -1.3rem;;
+        }
+    }
+}
