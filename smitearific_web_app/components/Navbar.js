@@ -98,10 +98,10 @@ function NavBar() {
                         <Nav.Link active={esports} id="esports" className="navText" href="/esports-stats">Esports Stats</Nav.Link>
                     </Nav>
                 </div>
-                <NavDropdown alignRight={true} className="dorpdownContainer" title={<FontAwesomeIcon className="navAvatar" icon={faUserCircle} />}>
+                {/* <NavDropdown alignRight={true} className="dorpdownContainer" title={<FontAwesomeIcon className="navAvatar" icon={faUserCircle} />}>
                     <NavDropdown.Item className="dropdownItem" href="#profile">Profile</NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem" href="#logout">Sign Out</NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
             </Navbar>
         </>
     )

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar.js';
-import NavigationEsports from '../../components/navigationEsports.js';
+import Navigation from '../../components/Navigation.js';
 import ScrollArrow from '../../components/scrollArrow.js';
 
 export default function Blog() {
@@ -8,7 +8,7 @@ export default function Blog() {
     return (
         <>
             <Navbar />
-            <NavigationEsports />
+            <Navigation />
             <ScrollArrow />
             <p>This is the {asPath} page</p>
         </>

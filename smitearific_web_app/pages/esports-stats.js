@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar.js';
+import NavigationEsports from '../components/navigationEsports.js';
 import ScrollArrow from '../components/scrollArrow.js';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -22,6 +23,20 @@ export default function EsportsStats() {
             )
     }, []);
 
+    function godFormatter(cell) {
+        let source = statsTableHelpers.NameToSource(cell);
+
+        return (
+            <div className="d-flex align-items-center">
+                <img className="godStatsIcon mr-4" src={source}></img>
+                <p>{cell}</p>
+            </div>
+        );
+    }
+
+    const searchFill = () => {
+        searcBar.current.props.onSearch("");
+    };
     const searchSolo = () => {
         searcBar.current.props.onSearch("Solo");
     };
@@ -43,6 +58,7 @@ export default function EsportsStats() {
         text: 'God',
         sort: true,
         title: true,
+        formatter: godFormatter
     }, {
         dataField: 'winRate',
         text: 'Win Rate',
@@ -80,6 +96,7 @@ export default function EsportsStats() {
     return (
         <>
             <Navbar />
+            <NavigationEsports />
             <ScrollArrow />
 
             <div className="tableContainer">
@@ -96,6 +113,7 @@ export default function EsportsStats() {
                                 <div className="d-flex mb-4 justify-content-between align-items-center">
                                     <SearchBar ref={searcBar} {...props.searchProps} />
                                     <ButtonGroup>
+                                        <Button variant="light"><img onClick={searchFill} className="roleStatsIcon" alt="fill" src="https://i.imgur.com/d5q0DA7.png"></img></Button>
                                         <Button variant="light"><img onClick={searchSolo} className="roleStatsIcon" alt="solo" src="https://i.imgur.com/7G2OSFj.png"></img></Button>
                                         <Button variant="light"><img onClick={searchJung} className="roleStatsIcon" alt="jung" src="https://i.imgur.com/l1BUe0w.png"></img></Button>
                                         <Button variant="light"><img onClick={searchMid} className="roleStatsIcon" alt="mid" src="https://i.imgur.com/8LgQst7.png"></img></Button>
@@ -106,7 +124,7 @@ export default function EsportsStats() {
                                 <BootstrapTable
                                     {...props.baseProps}
                                     defaultSorted={defaultSorted}
-                                    headerClasses="rounded"
+
                                 />
                             </div>
                         )
