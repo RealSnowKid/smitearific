@@ -1,13 +1,12 @@
-package com.example.demo;
+package com.god.stats;
 
-// import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.GenerationType;
 
 @Entity
-public class Gods {
+public class God {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +23,7 @@ public class Gods {
     private String role;
     private String secondaryRole;
 
-    public Gods() {
+    public God() {
     }
 
     public Long getId() {

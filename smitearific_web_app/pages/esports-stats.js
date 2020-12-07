@@ -18,7 +18,7 @@ export default function EsportsStats() {
             .then(
                 response => {
                     statsTableHelpers.ProperGodNames(response);
-                    setGodData(response.data._embedded.godses);
+                    setGodData(response.data._embedded.gods);
                 }
             )
     }, []);
