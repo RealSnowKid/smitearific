@@ -1,0 +1,20 @@
+[
+    {
+        "properties": [
+            {
+                "name": "info.devID",
+                "type": "java.lang.String",
+                "description": "Developmen ID for HiRezAPI"
+            }
+        ]
+    },
+    {
+        "properties": [
+            {
+                "name": "info.authKey",
+                "type": "java.lang.String",
+                "description": "Authentication Key for HiRezAPI'"
+            }
+        ]
+    }
+]

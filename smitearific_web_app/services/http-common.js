@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const httpdefault = () => {
+const http8080 = () => {
     return axios.create({
         baseURL: "http://localhost:8080/",
         headers: {
@@ -9,6 +9,16 @@ const httpdefault = () => {
     })
 };
 
+const http8081 = () => {
+    return axios.create({
+        baseURL: "http://localhost:8081/",
+        headers: {
+            "Content-type": "application/json"
+        }
+    })
+};
+
 export default {
-    httpdefault,
+    http8080,
+    http8081
 };
