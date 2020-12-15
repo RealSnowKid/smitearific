@@ -4,7 +4,6 @@ import Navigation from '../../components/Navigation';
 import { Tabs, Tab } from 'react-bootstrap';
 import ScrollArrow from '../../components/scrollArrow.js';
 import GodsService from '../../services/GodsService';
-import Router from 'next/router'
 
 function GodPage({ godData }) {
     const [godInfo, setGodInfo] = useState({});

@@ -10,6 +10,7 @@ module.exports = {
         '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
         '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
     },
+    testEnvironment: 'node',
     transformIgnorePatterns: [
         '/node_modules/',
         '^.+\\.module\\.(css|sass|scss)$',
