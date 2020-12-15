@@ -1,0 +1,99 @@
+.bigImgThumb {
+    max-height: 550px !important;
+    width: auto !important;
+}
+
+.smallImgThumb {
+    max-height: 260px !important;
+    width: auto !important;
+}
+
+.article {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+
+    &:hover .articleTitle {
+        color: lightgray;
+        text-decoration: none;
+    }
+}
+
+.articleBoxBig {
+    background-color: transparent;
+    height: 550px;
+    background-size: auto 548px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 4px 4px $darkblack;
+
+    h2 {
+        @media screen and (max-width: 1050px){
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.articleBoxSmall {
+    background: transparent; 
+    height: 260px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 4px 4px $darkblack;
+
+    &:first-child {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        margin-top: auto;
+        margin-right: auto;
+
+        @media screen and (max-width: 1050px){
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.articleBoxLong {
+    width: 70vw;
+    height: 380px;
+    background-color: $lightblack;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 4px 4px $gray;
+    margin-bottom: 1rem;
+
+    h2 {
+        margin-top: auto;
+        margin-right: auto;
+    }
+}
+
+
+.readIcon {
+    font-size: 2rem;
+    margin-right: 0.8rem;
+}
+
+.smallReadIcon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.smallReadText {
+    word-wrap: none;
+}
+
+.divWhite {
+    padding: 2rem;
+    background-color: $white;
+    color: $black;
+}

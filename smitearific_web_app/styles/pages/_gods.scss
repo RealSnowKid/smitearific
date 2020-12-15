@@ -1,0 +1,151 @@
+.card-deck {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: .5rem;
+    margin-top: 2rem;
+    
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+
+    .godCard {
+        background-color: rgba($blue, 0.4);
+        border: 2px $darkestblue solid;
+        width: 15rem;
+        height: auto;
+
+        .godIcon {
+            margin: 1rem auto 0 auto;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 21px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: 0.5s all ease-in-out;
+            }
+        }
+
+        .type {
+            width: 50px;
+            height: auto;
+            border-radius: 0px;
+            margin: 0 auto 0.5rem auto;
+        }
+        .godTitle {
+            font-weight: lighter;
+            color: $gold;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .godIcon {
+
+                img {
+                        transform: scale(1.5); 
+                }
+            }
+        }
+    }
+
+}
+
+.godInfo {
+    width: 60%;
+    margin-top: 1rem;
+
+    .godIcon {
+        height: 11rem;
+        width: 11rem;
+        border-radius: 21px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .type {
+        width: 45px;
+        height: auto;
+    }
+
+    .godNfo {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0 0 2rem;
+        width: 70%;
+
+        .ml-6 {
+            margin-left: 6rem;
+        }
+    }
+}
+
+.abilities {
+    width: 60%;
+    margin-top: 1rem;
+    border: 1px $white solid;
+
+    h2 {
+        margin: 0.5rem 0 0.5rem 1.2rem;
+        
+        &::after {
+            display:block;
+            content: "";
+            position: relative;
+            top: 0.5rem;
+            left: -1.2rem;
+            height: 1px;
+            width: calc(100% + 1.2rem);
+            border-bottom: 1px solid $white;
+          }
+    }
+
+    .abilityIcon {
+        width: 50%;
+        height: auto;
+    }
+
+    .attributes {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+    }
+    
+    .notes {
+        border: 1px $white solid;
+        border-radius: 22px;
+        padding: 1rem;
+        width: 100%;
+
+        h5 {
+            border-bottom: 1px solid $white;
+            font-weight: bold;
+        }
+    }
+
+    .nav-link {
+        &.active {
+            background-color: transparent !important;
+            // border: 2px solid;
+            // border-color: $gold $gold transparent $gold;
+
+            &::after{
+                content: "";
+                width: 0;
+                height: 0;
+                border-color: $gold transparent transparent;
+                border-style: solid;
+                border-width: 36px 115px 0;
+                position: absolute;
+                -webkit-transform: translateX(-71%) translateY(7.05rem);
+                transform: translateX(-71%) translateY(7.05rem);
+            }
+        }
+    }
+}

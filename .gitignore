@@ -1,37 +1,39 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+smitearific_web_app/node_modules
+smitearific_web_app/.pnp
+smitearific_web_app/.pnp.js
 
 # testing
-/coverage
+smitearific_web_app/coverage
 
 # next.js
-/.next/
-/out/
+smitearific_web_app/.next/
+smitearific_web_app/out/
 
 # production
-/build
+smitearific_web_app/build
 
 # misc
 .DS_Store
 *.pem
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+smitearific_web_app/npm-debug.log*
+smitearific_web_app/yarn-debug.log*
+smitearific_web_app/yarn-error.log*
 
 # local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+smitearific_web_app/.env.local
+smitearific_web_app/.env.development.local
+smitearific_web_app/.env.test.local
+smitearific_web_app/.env.production.local
 
 # vercel
-.vercel
+smitearific_web_app/.vercel
 
 # vscode
-.vscode/
+smitearific_web_app/.vscode/
+smitearific_api/.vscode/
+smitearific_api/info/src/main/resources/application-dev.properties

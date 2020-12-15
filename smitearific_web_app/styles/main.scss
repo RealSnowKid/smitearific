@@ -1,0 +1,36 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+// Bootstrap
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/bootstrap';
+
+// Variables
+@import 'variables';
+
+// Components
+@import './components/navbar';
+@import './components/nav';
+@import './components/scrollArrow';
+@import './components/statsTable';
+
+// Pages
+@import './pages/blog';
+@import './pages/tierList';
+@import './pages/gods';
+@import './pages/builds';
+@import './pages/blogpost';
+
+body {
+    font-family: $font-family-sans-serif;
+    background-color: $lightblack;
+    color: $white;
+}
+
+button, a {
+    outline: none;
+}
+
+#__next-prerender-indicator {
+    display: none;
+  }
