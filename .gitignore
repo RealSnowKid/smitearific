@@ -36,3 +36,4 @@ smitearific_web_app/.vercel
 # vscode
 smitearific_web_app/.vscode/
 smitearific_api/.vscode/
+smitearific_api/info/src/main/resources/application-dev.properties

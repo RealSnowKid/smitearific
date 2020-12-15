@@ -15,7 +15,6 @@ import java.time.format.DateTimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpEntity;
@@ -159,7 +158,7 @@ public class test {
 
                 }
 
-                String str = null;
+                String str;
                 try {
                         str = restTemplate.getForObject("http://localhost:8081/godinfoes/search/resetAutoIncrement",
                                         String.class);
