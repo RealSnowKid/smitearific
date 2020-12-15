@@ -1,14 +1,14 @@
 # SMITEARIFIC
-> SMITEARIFIC is a project, which is a part of my study programme in ICT at [Fontys University of Applied Sciences](https://fontys.edu/).
-## The Project
+> __SMITEARIFIC__ is a project, which is a part of my study programme in ICT at [Fontys University of Applied Sciences](https://fontys.edu/).
+## About The Project
 > The project itself is a website, that helps SMITE players get game statistics, informational articles, esports statistics and more so that they can become better at the game.
 > * The front-end is done via ReactJS
-> * The back-end is done utilizing Spring and Payara Micro Community
+> * The back-end is done utilizing Spring
 
 ## Technologies
-SMITEARIFIC utilizes a number of frameworks and open-source technologies to work:
-* [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
-* [NextJS](https://nextjs.org/) - The React Framework for Production
+__SMITEARIFIC__ utilizes a number of frameworks and open-source technologies to work:
+* [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces.
+* [NextJS](https://nextjs.org/) - The React Framework for Production.
 * [React-Bootstrap](https://react-bootstrap.github.io/) - The most popular front-end framework rebuilt for React.
 * [SCSS](https://sass-lang.com/) - The most mature, stable, and powerful professional grade CSS extension language in the world.
 * [Spring](https://spring.io/) - Spring makes programming Java quicker, easier, and safer for everybody. Spring’s focus on speed, simplicity, and productivity has made it the world's most popular Java framework.
