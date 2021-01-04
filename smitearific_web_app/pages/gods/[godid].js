@@ -69,7 +69,7 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability5Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{getMenuItems(godInfo.ability5Menuitems)}</p>
+                                <p>{godInfo.ability5Menuitems}</p>
 
                             </div>
                             <div className="attributes col-4">
