@@ -26,7 +26,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class test {
+public class pullData {
 
         // @Value("${info.devID}")
         // static String devId;
@@ -257,7 +257,7 @@ public class test {
                 getGodsCall();
 
                 String resourceName = "/data.json";
-                InputStream inputStream = test.class.getResourceAsStream(resourceName);
+                InputStream inputStream = pullData.class.getResourceAsStream(resourceName);
                 if (inputStream == null) {
                         throw new NullPointerException("Cannot find resource file " + resourceName);
                 }
