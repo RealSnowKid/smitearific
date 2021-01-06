@@ -11,9 +11,9 @@
 	<groupId>com.gods</groupId>
 	<artifactId>info</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>info</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Info API for Smitearific</description>
 
 	<properties>
 		<java.version>15</java.version>
