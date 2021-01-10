@@ -4,7 +4,6 @@ import Navigation from '../../components/Navigation';
 import { Tabs, Tab } from 'react-bootstrap';
 import ScrollArrow from '../../components/scrollArrow.js';
 import GodsService from '../../services/GodsService';
-import Router from 'next/router'
 
 function GodPage({ godData }) {
     const [godInfo, setGodInfo] = useState({});
@@ -70,7 +69,7 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability5Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{getMenuItems(godInfo.ability5Menuitems)}</p>
+                                <p>{godInfo.ability5Menuitems}</p>
 
                             </div>
                             <div className="attributes col-4">
