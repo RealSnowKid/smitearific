@@ -41,7 +41,7 @@ export default function Gods() {
                         </div>
                     </div>
                 </Link>
-                <Link href="/gods/ah-muzen-cab">
+                <Link href="/gods/ahmuzencab">
                     <div className="card godCard">
                         <div className="godIcon">
                             <img src="https://web2.hirez.com/smite/god-icons/ah-muzen-cab.jpg" />
@@ -56,7 +56,7 @@ export default function Gods() {
                         </div>
                     </div>
                 </Link>
-                <Link href="/gods/ah-puch">
+                <Link href="/gods/ahpuch">
                     <div className="card godCard">
                         <div className="godIcon">
                             <img src="https://web2.hirez.com/smite/god-icons/ah-puch.jpg" />
@@ -116,7 +116,7 @@ export default function Gods() {
                         </div>
                     </div>
                 </Link>
-                <Link href="/gods/ao-kuang">
+                <Link href="/gods/aokuang">
                     <div className="card godCard">
                         <div className="godIcon">
                             <img src="https://web2.hirez.com/smite/god-icons/ao-kuang.jpg" />
@@ -251,7 +251,7 @@ export default function Gods() {
                         </div>
                     </div>
                 </Link>
-                <Link href="/gods/baba-yaga">
+                <Link href="/gods/babayaga">
                     <div className="card godCard">
                         <div className="godIcon">
                             <img src="https://web2.hirez.com/smite/god-icons/baba-yaga.jpg" />

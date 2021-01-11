@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar.js';
 import Navigation from '../../components/Navigation';
+import rankItems from '../../components/rankItems';
+import menuItems from '../../components/menuItems';
 import { Tabs, Tab } from 'react-bootstrap';
 import ScrollArrow from '../../components/scrollArrow.js';
 import GodsService from '../../services/GodsService';
 
 function GodPage({ godData }) {
     const [godInfo, setGodInfo] = useState({});
-    const [menuItems, setMenuItems] = useState({});
     const [damageType, setDamageType] = useState();
 
     useEffect(() => {
@@ -23,15 +24,6 @@ function GodPage({ godData }) {
     function getDamageType(data) {
         if (data != null) {
             return (data.split(", ")[1]);
-        }
-    }
-
-    function getMenuItems(menuItems) {
-        if (menuItems != undefined) {
-            var obj = JSON.parse(menuItems);
-            console.log(obj[0].description);
-            setMenuItems(obj.description, obj.value);
-            return obj[0].description + " " + obj[0].value;
         }
     }
 
@@ -69,11 +61,10 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability5Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{godInfo.ability5Menuitems}</p>
-
+                                {menuItems(godInfo.ability5Cost, godInfo.ability5Cooldown, godInfo.ability5Menuitems)}
                             </div>
                             <div className="attributes col-4">
-                                <p>{godInfo.ability5Rankitems}</p>
+                                {rankItems(godInfo.ability5Rankitems)}
                             </div>
                         </div>
                     </Tab>
@@ -82,11 +73,10 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability1Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{godInfo.ability1Menuitems}</p>
-
+                                {menuItems(godInfo.ability1Cost, godInfo.ability1Cooldown, godInfo.ability1Menuitems)}
                             </div>
                             <div className="attributes col-4">
-                                <p>{godInfo.ability1Rankitems}</p>
+                                {rankItems(godInfo.ability1Rankitems)}
                             </div>
                         </div>
                     </Tab>
@@ -95,11 +85,10 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability2Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{godInfo.ability2Menuitems}</p>
-
+                                {menuItems(godInfo.ability2Cost, godInfo.ability2Cooldown, godInfo.ability2Menuitems)}
                             </div>
                             <div className="attributes col-4">
-                                <p>{godInfo.ability2Rankitems}</p>
+                                {rankItems(godInfo.ability2Rankitems)}
                             </div>
                         </div>
                     </Tab>
@@ -108,11 +97,10 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability3Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{godInfo.ability3Menuitems}</p>
-
+                                {menuItems(godInfo.ability3Cost, godInfo.ability3Cooldown, godInfo.ability3Menuitems)}
                             </div>
                             <div className="attributes col-4">
-                                <p>{godInfo.ability3Rankitems}</p>
+                                {rankItems(godInfo.ability3Rankitems)}
                             </div>
                         </div>
                     </Tab>
@@ -121,11 +109,10 @@ function GodPage({ godData }) {
                         <p>{godInfo.ability4Description}</p>
                         <div className="d-flex flex-row">
                             <div className="attributes col-4">
-                                <p>{godInfo.ability4Menuitems}</p>
-
+                                {menuItems(godInfo.ability4Cost, godInfo.ability4Cooldown, godInfo.ability4Menuitems)}
                             </div>
                             <div className="attributes col-4">
-                                <p>{godInfo.ability4Rankitems}</p>
+                                {rankItems(godInfo.ability4Rankitems)}
                             </div>
                         </div>
                     </Tab>
