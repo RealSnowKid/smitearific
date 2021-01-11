@@ -26,15 +26,6 @@ function GodPage({ godData }) {
         }
     }
 
-    function getMenuItems(menuItems) {
-        if (menuItems != undefined) {
-            var obj = JSON.parse(menuItems);
-            console.log(obj[0].description);
-            setMenuItems(obj.description, obj.value);
-            return obj[0].description + " " + obj[0].value;
-        }
-    }
-
     return (
         <>
             <Navbar />
