@@ -36,6 +36,8 @@ smitearific_web_app/.vercel
 # vscode
 smitearific_web_app/.vscode/
 smitearific_api/.vscode/
+
+#env and spring
 smitearific_api/info/src/main/resources/application-dev.properties
 smitearific_api/stats/src/main/resources/application-dev.properties
 smitearific_api/.env
