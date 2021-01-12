@@ -6,6 +6,7 @@ import menuItems from '../../components/menuItems';
 import { Tabs, Tab } from 'react-bootstrap';
 import ScrollArrow from '../../components/scrollArrow.js';
 import GodsService from '../../services/GodsService';
+import godInfoHelper from '../../helpers/godInfoHelper';
 
 function GodPage({ godData }) {
     const [godInfo, setGodInfo] = useState({});
@@ -39,7 +40,7 @@ function GodPage({ godData }) {
                     </div>
                     <div className="godNfo">
                         <div className="d-flex align-items-center">
-                            <h1 className="font-weight-bold">{godInfo.name}</h1>
+                            <h1 className="font-weight-bold">{godInfo.name != undefined ? godInfoHelper.ProperGodNames(godInfo.name) : <></>}</h1>
                             <h2 className="ml-6">{godInfo.title}</h2>
                         </div>
                         <div className="d-flex justify-content-between mt-4">

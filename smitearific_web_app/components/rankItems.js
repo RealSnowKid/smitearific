@@ -9,7 +9,6 @@ function rankItems(rankItems) {
         }
     }, [rankItems])
 
-    console.log(items);
     return (
         <>
             {items != null ? items.map((item) =>
