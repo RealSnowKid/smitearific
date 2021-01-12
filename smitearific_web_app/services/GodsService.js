@@ -8,7 +8,12 @@ const GetGodInfo = (data) => {
     return http.http8081().get("godinfoes/search/findByName?name=" + data)
 }
 
+const GetAllGodsInfo = () => {
+    return http.http8081().get("godinfoes")
+}
+
 export default {
     GetGods,
-    GetGodInfo
+    GetGodInfo,
+    GetAllGodsInfo
 };

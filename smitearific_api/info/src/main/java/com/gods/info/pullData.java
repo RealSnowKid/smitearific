@@ -15,12 +15,12 @@ import java.time.format.DateTimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -28,14 +28,14 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class pullData {
 
-        // @Value("${info.devID}")
-        // static String devId;
+        // @Autowired
+        // MyProperties myProps;
 
         private static String devId = "3464";
         private static String authKey = "041BACEB6C5A49689802269818DF2816";
         private static String session;
 
-        static void InsertGods(InputStream is) {
+        private static void InsertGods(InputStream is) {
                 RestTemplate restTemplate = new RestTemplate();
 
                 String str = restTemplate.getForObject("http://localhost:8081/godinfoes", String.class);
@@ -53,7 +53,7 @@ public class pullData {
 
         }
 
-        static void PostGods(InputStream is) {
+        private static void PostGods(InputStream is) {
                 JSONTokener tokener = new JSONTokener(is);
                 JSONArray ja = new JSONArray(tokener);
                 System.out.println(ja.length());
@@ -142,9 +142,56 @@ public class pullData {
 
                         System.out.println(godinfo.getName());
                 }
+
+                PatchLanes();
         }
 
-        static void DeleteGods() {
+        private static void PatchLanes() {
+                RestTemplate restTemplate = new RestTemplate();
+                HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
+
+                String string = restTemplate.getForObject("http://localhost:8081/godinfoes/", String.class);
+                JSONArray jArray = new JSONObject(string).getJSONObject("_embedded").getJSONArray("godinfoes");
+
+                String lanes = "/lanes.json";
+                InputStream iStream = pullData.class.getResourceAsStream(lanes);
+                if (iStream == null) {
+                        throw new NullPointerException("Cannot find resource file " + lanes);
+                }
+
+                JSONTokener tokener = new JSONTokener(iStream);
+                JSONArray ja = new JSONArray(tokener);
+
+                HttpHeaders headers = new HttpHeaders();
+                headers.setContentType(MediaType.APPLICATION_JSON);
+                restTemplate.setRequestFactory(requestFactory);
+
+                for (int i = 1; i <= jArray.length(); i++) {
+                        String name = jArray.getJSONObject(i - 1).getString("name");
+                        String url = "http://localhost:8081/godinfoes/" + i;
+
+                        for (int j = 0; j < ja.length(); j++) {
+                                String jaName = ja.getJSONObject(j).getString("name");
+                                if (name.equals(jaName)) {
+                                        JSONObject jObject = new JSONObject();
+                                        jObject.put("lane", ja.getJSONObject(j).getString("lane"));
+                                        System.out.println(jObject);
+
+                                        HttpEntity<String> request = new HttpEntity<String>(jObject.toString(),
+                                                        headers);
+
+                                        godinfo godinfo = restTemplate.patchForObject(url, request, godinfo.class);
+
+                                        System.out.println(godinfo.getLane());
+
+                                }
+                        }
+
+                }
+
+        }
+
+        private static void DeleteGods() {
                 RestTemplate restTemplate = new RestTemplate();
 
                 String string = restTemplate.getForObject("http://localhost:8081/godinfoes/", String.class);
@@ -191,7 +238,7 @@ public class pullData {
                 RestTemplate restTemplate = new RestTemplate();
                 String response = restTemplate.getForObject(hiRezApString, String.class);
                 JSONObject jo = new JSONObject(response);
-                System.out.println("Return message: " + jo.getString("ret_msg") + " Session ID: "
+                System.out.println("Return message: " + jo.getString("ret_msg") + " SessionID: "
                                 + jo.getString("session_id") + " Timestamp: " + jo.getString("timestamp"));
                 session = jo.getString("session_id");
                 System.out.println(session);
@@ -253,7 +300,6 @@ public class pullData {
         }
 
         public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-
                 getGodsCall();
 
                 String resourceName = "/data.json";

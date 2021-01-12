@@ -1,0 +1,446 @@
+[
+    {
+        "name": "Achilles",
+        "lane": "Solo"
+    },
+    {
+        "name": "Agni",
+        "lane": "Mid"
+    },
+    {
+        "name": "AhMuzenCab",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "AhPuch",
+        "lane": "Mid"
+    },
+    {
+        "name": "Amaterasu",
+        "lane": "Solo"
+    },
+    {
+        "name": "Anhur",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Anubis",
+        "lane": "Mid"
+    },
+    {
+        "name": "AoKuang",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Aphrodite",
+        "lane": "Mid"
+    },
+    {
+        "name": "Apollo",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Arachne",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Ares",
+        "lane": "Support"
+    },
+    {
+        "name": "Artemis",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Artio",
+        "lane": "Support"
+    },
+    {
+        "name": "Athena",
+        "lane": "Support"
+    },
+    {
+        "name": "Awilix",
+        "lane": "Jungle"
+    },
+    {
+        "name": "BabaYaga",
+        "lane": "Mid"
+    },
+    {
+        "name": "Bacchus",
+        "lane": "Support"
+    },
+    {
+        "name": "Bakasura",
+        "lane": "Jungle"
+    },
+    {
+        "name": "BaronSamedi",
+        "lane": "Solo"
+    },
+    {
+        "name": "Bastet",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Bellona",
+        "lane": "Solo"
+    },
+    {
+        "name": "Cabrakan",
+        "lane": "Support"
+    },
+    {
+        "name": "Camazotz",
+        "lane": "Solo"
+    },
+    {
+        "name": "Cerberus",
+        "lane": "Solo"
+    },
+    {
+        "name": "Cernunnos",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Chaac",
+        "lane": "Solo"
+    },
+    {
+        "name": "Chang'e",
+        "lane": "Solo"
+    },
+    {
+        "name": "Chernobog",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Chiron",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Chronos",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Cthulhu",
+        "lane": "Solo"
+    },
+    {
+        "name": "CuChulainn",
+        "lane": "Solo"
+    },
+    {
+        "name": "Cupid",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "DaJi",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Discordia",
+        "lane": "Mid"
+    },
+    {
+        "name": "ErlangShen",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Fafnir",
+        "lane": "Support"
+    },
+    {
+        "name": "Fenrir",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Freya",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Ganesha",
+        "lane": "Support"
+    },
+    {
+        "name": "Geb",
+        "lane": "Support"
+    },
+    {
+        "name": "GuanYu",
+        "lane": "Solo"
+    },
+    {
+        "name": "Hachiman",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Hades",
+        "lane": "Solo"
+    },
+    {
+        "name": "HeBo",
+        "lane": "Mid"
+    },
+    {
+        "name": "Heimdallr",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Hel",
+        "lane": "Solo"
+    },
+    {
+        "name": "Hera",
+        "lane": "Mid"
+    },
+    {
+        "name": "Hercules",
+        "lane": "Support"
+    },
+    {
+        "name": "Horus",
+        "lane": "Support"
+    },
+    {
+        "name": "HouYi",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "HunBatz",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Isis",
+        "lane": "Mid"
+    },
+    {
+        "name": "Izanami",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Janus",
+        "lane": "Mid"
+    },
+    {
+        "name": "JingWei",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Jormungandr",
+        "lane": "Solo"
+    },
+    {
+        "name": "Kali",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Khepri",
+        "lane": "Support"
+    },
+    {
+        "name": "KingArthur",
+        "lane": "Solo"
+    },
+    {
+        "name": "Kukulkan",
+        "lane": "Mid"
+    },
+    {
+        "name": "Kumbhakarna",
+        "lane": "Support"
+    },
+    {
+        "name": "Kuzenbo",
+        "lane": "Support"
+    },
+    {
+        "name": "Loki",
+        "lane": "Solo"
+    },
+    {
+        "name": "Medusa",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Mercury",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Merlin",
+        "lane": "Mid"
+    },
+    {
+        "name": "Mulan",
+        "lane": "Solo"
+    },
+    {
+        "name": "NeZha",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Neith",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Nemesis",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Nike",
+        "lane": "Solo"
+    },
+    {
+        "name": "Nox",
+        "lane": "Mid"
+    },
+    {
+        "name": "NuWa",
+        "lane": "Mid"
+    },
+    {
+        "name": "Odin",
+        "lane": "Solo"
+    },
+    {
+        "name": "Olorun",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Osiris",
+        "lane": "Solo"
+    },
+    {
+        "name": "Pele",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Persephone",
+        "lane": "Mid"
+    },
+    {
+        "name": "Poseidon",
+        "lane": "Mid"
+    },
+    {
+        "name": "Ra",
+        "lane": "Mid"
+    },
+    {
+        "name": "Raijin",
+        "lane": "Mid"
+    },
+    {
+        "name": "Rama",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Ratatoskr",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Ravana",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Scylla",
+        "lane": "Mid"
+    },
+    {
+        "name": "Serqet",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Set",
+        "lane": "Solo"
+    },
+    {
+        "name": "Skadi",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Sobek",
+        "lane": "Solo"
+    },
+    {
+        "name": "Sol",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "SunWukong",
+        "lane": "Solo"
+    },
+    {
+        "name": "Susano",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Sylvanus",
+        "lane": "Support"
+    },
+    {
+        "name": "Terra",
+        "lane": "Support"
+    },
+    {
+        "name": "Thanatos",
+        "lane": "Jungle"
+    },
+    {
+        "name": "TheMorrigan",
+        "lane": "Mid"
+    },
+    {
+        "name": "Thor",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Thoth",
+        "lane": "Mid"
+    },
+    {
+        "name": "Tsukuyomi",
+        "lane": "Jungle"
+    },
+    {
+        "name": "Tyr",
+        "lane": "Solo"
+    },
+    {
+        "name": "Ullr",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "Vamana",
+        "lane": "Solo"
+    },
+    {
+        "name": "Vulcan",
+        "lane": "Mid"
+    },
+    {
+        "name": "Xbalanque",
+        "lane": "AD Carry"
+    },
+    {
+        "name": "XingTian",
+        "lane": "Support"
+    },
+    {
+        "name": "Yemoja",
+        "lane": "Support"
+    },
+    {
+        "name": "Ymir",
+        "lane": "Support"
+    },
+    {
+        "name": "Zeus",
+        "lane": "Mid"
+    },
+    {
+        "name": "ZhongKui",
+        "lane": "Solo"
+    }
+]
