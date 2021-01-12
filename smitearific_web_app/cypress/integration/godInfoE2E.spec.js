@@ -29,7 +29,7 @@ describe('God Info End to End Tests', () => {
     it('The god\'s roles should be visible and correct', () => {
         cy.clickAchilles();
         cy.get('div.godNfo > div.justify-content-between > p').should('be.visible');
-        cy.get('div.godNfo > div.justify-content-between > p').contains('No Lane Assigned');
+        cy.get('div.godNfo > div.justify-content-between > p').contains('Solo');
         cy.get('div.godNfo > div.justify-content-between > p').eq(1).contains('Warrior');
         cy.get('div.godNfo > div.justify-content-between > p').eq(2).contains('Greek');
         cy.get('div.godNfo > div.justify-content-between > p').eq(3).contains('Melee');

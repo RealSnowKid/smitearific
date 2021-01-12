@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test": "cypress open",
+    "test:ci": "cypress run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
