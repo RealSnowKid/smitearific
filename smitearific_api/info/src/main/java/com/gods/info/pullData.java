@@ -299,7 +299,7 @@ public class pullData {
 
         }
 
-        public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        public static void DoThing() throws NoSuchAlgorithmException, UnsupportedEncodingException {
                 getGodsCall();
 
                 String resourceName = "/data.json";
