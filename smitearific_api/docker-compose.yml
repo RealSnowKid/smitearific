@@ -6,7 +6,7 @@ services:
     container_name: infoapi
     restart: always
     build:
-      context: ./stats/
+      context: ./info/
     environment:
         - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/smite_god_info
         - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
@@ -27,7 +27,7 @@ services:
         - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
         - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
     ports:
-      - 8082:8080
+      - 8080:8080
     depends_on:
       - db
 
