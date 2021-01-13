@@ -51,7 +51,7 @@ CREATE TABLE `god` (
 --
 
 INSERT INTO `god` (`id`, `god`, `win_rate`, `prev_win_rate`, `pick_rate`, `prev_pick_rate`, `ban_rate`, `prev_ban_rate`, `p_andbrate`, `prevpandbrate`, `role`, `secondary_role`) VALUES
-(1, 'Achilles', '46.22', '46.17', '11.05', '10.77', '2.65', '2.07', '13.70', '12.84', 'solo', 'supp'),
+(1, 'Achilles', '46.22', '46.17', '11.05', '10.77', '2.65', '2.07', '13.70', '12.84', 'solo', NULL),
 (2, 'Agni', '52.16', '49.48', '11.54', '11.20', '1.01', '1.25', '12.55', '12.45', 'mid', NULL),
 (3, 'AMC', '48.11', '40.88', '2.89', '2.44', '0.20', '0.17', '3.09', '2.61', 'adc', NULL),
 (4, 'AhPuch', '45.22', '47.67', '1.22', '0.71', '0.09', '0.11', '1.31', '0.82', 'mid', NULL),

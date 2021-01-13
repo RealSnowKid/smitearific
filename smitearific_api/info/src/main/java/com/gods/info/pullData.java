@@ -175,7 +175,6 @@ public class pullData {
                                 if (name.equals(jaName)) {
                                         JSONObject jObject = new JSONObject();
                                         jObject.put("lane", ja.getJSONObject(j).getString("lane"));
-                                        System.out.println(jObject);
 
                                         HttpEntity<String> request = new HttpEntity<String>(jObject.toString(),
                                                         headers);
