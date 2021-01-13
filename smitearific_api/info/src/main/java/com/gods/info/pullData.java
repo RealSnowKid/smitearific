@@ -175,7 +175,6 @@ public class pullData {
                                 if (name.equals(jaName)) {
                                         JSONObject jObject = new JSONObject();
                                         jObject.put("lane", ja.getJSONObject(j).getString("lane"));
-                                        System.out.println(jObject);
 
                                         HttpEntity<String> request = new HttpEntity<String>(jObject.toString(),
                                                         headers);
@@ -299,7 +298,7 @@ public class pullData {
 
         }
 
-        public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        public static void DoThing() throws NoSuchAlgorithmException, UnsupportedEncodingException {
                 getGodsCall();
 
                 String resourceName = "/data.json";

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "cypress open",
-    "test:headless": "cypress run"
+    "test:ci": "cypress run --record --key 210da298-e1d4-42d1-94b3-d4447676c628"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
