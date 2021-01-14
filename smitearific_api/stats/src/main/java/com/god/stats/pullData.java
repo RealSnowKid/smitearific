@@ -11,7 +11,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.springframework.util.StringUtils;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.apache.http.HttpEntity;
@@ -49,7 +48,7 @@ public class pullData {
         }
 
         private static void postGods(JSONArray ja) {
-                System.out.println(ja.get(3).toString());
+                System.out.println(ja.length());
                 Locale currentLocale = Locale.getDefault();
                 DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(currentLocale);
                 otherSymbols.setDecimalSeparator('.');

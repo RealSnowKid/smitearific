@@ -1,18 +1,19 @@
 version: '3.4'
 
+# docker-compose up -d
 services:
   info-api:
     image: infoapi
     container_name: infoapi
     restart: always
     build:
-      context: ./stats/
+      context: ./info/
     environment:
         - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/smite_god_info
         - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
         - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
     ports:
-      - 8081:8081
+      - 8081:8080
     depends_on:
       - db
 
@@ -27,7 +28,7 @@ services:
         - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
         - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
     ports:
-      - 8082:8080
+      - 8080:8080
     depends_on:
       - db
 
@@ -35,9 +36,6 @@ services:
     image: mariadb:10.4
     restart: always
     environment:
-        # So you don't have to use root, but you can if you like
-        # MYSQL_USER: 'user'
-        # MYSQL_PASSWORD: ${DB_PASS}
         # Password for root access
         MYSQL_ROOT_PASSWORD: ${DB_PASS}
     volumes:

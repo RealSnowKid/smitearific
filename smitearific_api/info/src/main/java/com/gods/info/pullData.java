@@ -1,8 +1,5 @@
 package com.gods.info;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -35,27 +32,25 @@ public class pullData {
         private static String authKey = "041BACEB6C5A49689802269818DF2816";
         private static String session;
 
-        private static void InsertGods(InputStream is) {
+        private static void InsertGods(JSONArray ja) {
                 RestTemplate restTemplate = new RestTemplate();
 
-                String str = restTemplate.getForObject("http://localhost:8081/godinfoes", String.class);
+                String str = restTemplate.getForObject("http://localhost:8080/godinfoes", String.class);
                 JSONObject jObject = new JSONObject(str);
                 JSONArray jArray = jObject.getJSONObject("_embedded").getJSONArray("godinfoes");
 
                 if (jArray.length() >= 111) {
                         System.out.println("Gods Already Exist");
                         DeleteGods();
-                        PostGods(is);
+                        PostGods(ja);
                 } else {
                         System.out.println("God are being posted");
-                        PostGods(is);
+                        PostGods(ja);
                 }
 
         }
 
-        private static void PostGods(InputStream is) {
-                JSONTokener tokener = new JSONTokener(is);
-                JSONArray ja = new JSONArray(tokener);
+        private static void PostGods(JSONArray ja) {
                 System.out.println(ja.length());
                 for (int i = 0; i < ja.length(); i++) {
                         JSONObject jo = ja.getJSONObject(i);
@@ -137,7 +132,7 @@ public class pullData {
 
                         HttpEntity<String> request = new HttpEntity<String>(jobj.toString(), headers);
 
-                        godinfo godinfo = restTemplate.postForObject("http://localhost:8081/godinfoes", request,
+                        godinfo godinfo = restTemplate.postForObject("http://localhost:8080/godinfoes", request,
                                         godinfo.class);
 
                         System.out.println(godinfo.getName());
@@ -150,7 +145,7 @@ public class pullData {
                 RestTemplate restTemplate = new RestTemplate();
                 HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
 
-                String string = restTemplate.getForObject("http://localhost:8081/godinfoes/", String.class);
+                String string = restTemplate.getForObject("http://localhost:8080/godinfoes/", String.class);
                 JSONArray jArray = new JSONObject(string).getJSONObject("_embedded").getJSONArray("godinfoes");
 
                 String lanes = "/lanes.json";
@@ -168,7 +163,7 @@ public class pullData {
 
                 for (int i = 1; i <= jArray.length(); i++) {
                         String name = jArray.getJSONObject(i - 1).getString("name");
-                        String url = "http://localhost:8081/godinfoes/" + i;
+                        String url = "http://localhost:8080/godinfoes/" + i;
 
                         for (int j = 0; j < ja.length(); j++) {
                                 String jaName = ja.getJSONObject(j).getString("name");
@@ -193,20 +188,20 @@ public class pullData {
         private static void DeleteGods() {
                 RestTemplate restTemplate = new RestTemplate();
 
-                String string = restTemplate.getForObject("http://localhost:8081/godinfoes/", String.class);
+                String string = restTemplate.getForObject("http://localhost:8080/godinfoes/", String.class);
                 JSONArray jArray = new JSONObject(string).getJSONObject("_embedded").getJSONArray("godinfoes");
                 System.out.println(jArray.length());
 
                 for (int i = 1; i <= jArray.length(); i++) {
-                        restTemplate.delete("http://localhost:8081/godinfoes/" + i);
+                        restTemplate.delete("http://localhost:8080/godinfoes/" + i);
 
-                        System.out.println("Deleted @ http://localhost:8081/godinfoes/" + i);
+                        System.out.println("Deleted @ http://localhost:8080/godinfoes/" + i);
 
                 }
 
                 String str;
                 try {
-                        str = restTemplate.getForObject("http://localhost:8081/godinfoes/search/resetAutoIncrement",
+                        str = restTemplate.getForObject("http://localhost:8080/godinfoes/search/resetAutoIncrement",
                                         String.class);
                 } catch (HttpClientErrorException ex) {
                         if (ex.getStatusCode() != HttpStatus.NOT_FOUND) {
@@ -265,49 +260,10 @@ public class pullData {
                 RestTemplate restTemplate = new RestTemplate();
                 String response = restTemplate.getForObject(hiRezApString, String.class);
                 JSONArray ja = new JSONArray(response);
-
-                try {
-                        File file = new File(
-                                        "E:/Repositories/smitearific/smitearific_api/info/src/main/resources/data.json");
-                        if (file.createNewFile()) {
-                                System.out.println("File created: " + file.getName());
-                                FileWriter myWriter = new FileWriter(
-                                                "E:/Repositories/smitearific/smitearific_api/info/src/main/resources/data.json");
-                                myWriter.write(ja.toString());
-                                myWriter.close();
-                                System.out.println("Successfully wrote to the file.");
-                        } else if (file.delete()) {
-                                System.out.println("Deleted the file: " + file.getName());
-                                if (file.createNewFile()) {
-                                        System.out.println("File created: " + file.getName());
-                                        FileWriter myWriter = new FileWriter(
-                                                        "E:/Repositories/smitearific/smitearific_api/info/src/main/resources/data.json");
-                                        myWriter.write(ja.toString());
-                                        myWriter.close();
-                                        System.out.println("Successfully wrote to the file.");
-                                } else {
-                                        System.out.println("Failed to create and recreate the file.");
-                                }
-                        } else {
-                                System.out.println("Failed to create or delete the file.");
-                        }
-                } catch (IOException e) {
-                        System.out.println("An error occurred.");
-                        e.printStackTrace();
-                }
-
+                InsertGods(ja);
         }
 
         public static void DoThing() throws NoSuchAlgorithmException, UnsupportedEncodingException {
                 getGodsCall();
-
-                String resourceName = "/data.json";
-                InputStream inputStream = pullData.class.getResourceAsStream(resourceName);
-                if (inputStream == null) {
-                        throw new NullPointerException("Cannot find resource file " + resourceName);
-                }
-
-                InsertGods(inputStream);
-
         }
 }
