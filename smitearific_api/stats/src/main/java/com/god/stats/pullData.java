@@ -48,7 +48,7 @@ public class pullData {
         }
 
         private static void postGods(JSONArray ja) {
-                System.out.println(ja.get(3).toString());
+                System.out.println(ja.length());
                 Locale currentLocale = Locale.getDefault();
                 DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(currentLocale);
                 otherSymbols.setDecimalSeparator('.');
