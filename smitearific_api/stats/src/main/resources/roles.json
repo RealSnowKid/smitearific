@@ -1,0 +1,562 @@
+[
+    {
+        "name": "Achilles",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Agni",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "AhMuzenCab",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "AhPuch",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Amaterasu",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Anhur",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Anubis",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "AoKuang",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Aphrodite",
+        "role": "mid",
+        "secondary": "solo"
+    },
+    {
+        "name": "Apollo",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Arachne",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Ares",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Artemis",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Artio",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Athena",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Awilix",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "BabaYaga",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Bacchus",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Bakasura",
+        "role": "jung",
+        "secondary": "solo"
+    },
+    {
+        "name": "BaronSamedi",
+        "role": "solo",
+        "secondary": "mid"
+    },
+    {
+        "name": "Bastet",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Bellona",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Cabrakan",
+        "role": "supp",
+        "secondary": "jung"
+    },
+    {
+        "name": "Camazotz",
+        "role": "jung",
+        "secondary": "solo"
+    },
+    {
+        "name": "Cerberus",
+        "role": "solo",
+        "secondary": "supp"
+    },
+    {
+        "name": "Cernunnos",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Chaac",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Chang'e",
+        "role": "solo",
+        "secondary": "mid"
+    },
+    {
+        "name": "Chernobog",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Chiron",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Chronos",
+        "role": "adc",
+        "secondary": "mid"
+    },
+    {
+        "name": "Cthulhu",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "CuChulainn",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Cupid",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "DaJi",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Danzaburou",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Discordia",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "ErlangShen",
+        "role": "jung",
+        "secondary": "solo"
+    },
+    {
+        "name": "Fafnir",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Fenrir",
+        "role": "jung",
+        "secondary": "supp"
+    },
+    {
+        "name": "Freya",
+        "role": "adc",
+        "secondary": "mid"
+    },
+    {
+        "name": "Ganesha",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Geb",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "GuanYu",
+        "role": "solo",
+        "secondary": "supp"
+    },
+    {
+        "name": "Hachiman",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Hades",
+        "role": "solo",
+        "secondary": "mid"
+    },
+    {
+        "name": "HeBo",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Heimdallr",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Hel",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Hera",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Hercules",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Horus",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "HouYi",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "HunBatz",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Isis",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Izanami",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Janus",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "JingWei",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Jormungandr",
+        "role": "solo",
+        "secondary": "supp"
+    },
+    {
+        "name": "Kali",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Khepri",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "KingArthur",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Kukulkan",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Kumbhakarna",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Kuzenbo",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Loki",
+        "role": "jung",
+        "secondary": "solo"
+    },
+    {
+        "name": "Medusa",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Mercury",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Merlin",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Mulan",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "NeZha",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Neith",
+        "role": "adc",
+        "secondary": "mid"
+    },
+    {
+        "name": "Nemesis",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Nike",
+        "role": "solo",
+        "secondary": "jung"
+    },
+    {
+        "name": "Nox",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "NuWa",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Odin",
+        "role": "solo",
+        "secondary": "jung"
+    },
+    {
+        "name": "Olorun",
+        "role": "adc",
+        "secondary": "mid"
+    },
+    {
+        "name": "Osiris",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Pele",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Persephone",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Poseidon",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Ra",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Raijin",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Rama",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Ratatoskr",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Ravana",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Scylla",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Serqet",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Set",
+        "role": "solo",
+        "secondary": "jung"
+    },
+    {
+        "name": "Skadi",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "Sobek",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Sol",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "SunWukong",
+        "role": "solo",
+        "secondary": "jung"
+    },
+    {
+        "name": "Susano",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Sylvanus",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Terra",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Thanatos",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "TheMorrigan",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Thor",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Thoth",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Tsukuyomi",
+        "role": "jung",
+        "secondary": ""
+    },
+    {
+        "name": "Tyr",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Ullr",
+        "role": "adc",
+        "secondary": "mid"
+    },
+    {
+        "name": "Vamana",
+        "role": "solo",
+        "secondary": ""
+    },
+    {
+        "name": "Vulcan",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "Xbalanque",
+        "role": "adc",
+        "secondary": ""
+    },
+    {
+        "name": "XingTian",
+        "role": "supp",
+        "secondary": "solo"
+    },
+    {
+        "name": "Yemoja",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Ymir",
+        "role": "supp",
+        "secondary": ""
+    },
+    {
+        "name": "Zeus",
+        "role": "mid",
+        "secondary": ""
+    },
+    {
+        "name": "ZhongKui",
+        "role": "solo",
+        "secondary": ""
+    }
+]

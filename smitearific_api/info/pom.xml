@@ -11,9 +11,9 @@
 	<groupId>com.gods</groupId>
 	<artifactId>info</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>info</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Info API for Smitearific</description>
 
 	<properties>
 		<java.version>15</java.version>
@@ -55,6 +55,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13</version>
 		</dependency>
 	</dependencies>
 
