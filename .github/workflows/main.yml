@@ -29,7 +29,6 @@ jobs:
 
       - name: Build the Info API with Maven
         run: mvn -B package --file pom.xml
-#       - run: mkdir staging && cp */target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
           name: Package
@@ -57,11 +56,22 @@ jobs:
 
       - name: Build the Stats API with Maven
         run: mvn -B package --file pom.xml
-#       - run: mkdir staging && cp */target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
           name: Package
           path: smitearific_api/stats/target/*.jar
   
-#   run-backend-with-docker:
-#     name: Runs the APIs and Database in a docker container
+  run-backend-with-docker:
+    name: Runs the APIs and Database in a docker container
+    runs-on: ubuntu-latest
+    needs: [build-info-api, build-stats-api]
+    defaults:
+      run:
+        working-directory: smitearific_api
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker images
+        run: docker-compose build
+      - name: Run docker container
+        run: docker-compose -f docker-compose.yml -f secret.yml up -d
+        
