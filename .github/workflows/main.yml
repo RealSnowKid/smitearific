@@ -30,9 +30,6 @@ jobs:
         
       - name: Build front-end
         run: npm run build
-                
-      - name: Run front-end
-        run: npm run start
         
   build-info-api:
     name: Build the Info API
@@ -118,11 +115,21 @@ jobs:
       - name: Run docker container
         run: docker-compose up -d
 
-#   run-e2e-tests:
-#     name: Runs Cypress e2e tests
-#     runs-on: ubuntu-latest
-#     needs: [build-front-end, run-backend-with-docker]
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: 
+  run-e2e-tests:
+    name: Runs Cypress e2e tests
+    runs-on: ubuntu-latest
+    needs: [build-front-end, run-backend-with-docker]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run the front-end
+        run: npm run start
+        working-directory: smitearific_web_app
+      
+      - uses: jakejarvis/wait-action@v0.1.0
+        with:
+          time: '60s'
+      
+      - name: Run Cypress e2e tests
+        run: npm run test:ci
+        working-directory: smitearific_web_app
     
