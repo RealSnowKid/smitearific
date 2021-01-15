@@ -7,6 +7,23 @@ on:
     branches: [ main ]
 
 jobs:
+  build-front-end:
+    name: Builds the front-end and runs it
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: smitearific_web_app
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+      
+      - name: Build front-end
+        run: npm run build
+        
   build-info-api:
     name: Build the Info API
     runs-on: ubuntu-latest
@@ -78,15 +95,21 @@ jobs:
         with:
           name: info
           path: smitearific_api/info/target/
+
       - name: Downaload stas jar
         uses: actions/download-artifact@v2
         with:
           name: stats
           path: smitearific_api/stats/target/
+      
       - name: Build Docker images
         run: docker-compose build
+      
       - name: Run docker container
         run: docker-compose up -d
 
 #   run-e2e-tests:
 #     name: Runs Cypress e2e tests
+#     runs-on: ubuntu-latest
+#     needs: [build-front-end, run-backend-with-docker]
+    
