@@ -29,7 +29,7 @@ jobs:
 
       - name: Build the Info API with Maven
         run: mvn -B package --file pom.xml
-      - run: mkdir staging && cp smitearific_api/stats staging
+      - run: mkdir staging && cp */target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
           name: Package
@@ -57,7 +57,7 @@ jobs:
 
       - name: Build the Stats API with Maven
         run: mvn -B package --file pom.xml
-      - run: mkdir staging && cp smitearific_api/stats staging
+      - run: mkdir staging && cp */target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
           name: Package
