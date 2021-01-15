@@ -86,7 +86,7 @@ describe('God Stats End to End Tests', () => {
         cy.get('div.react-bootstrap-table > table > tbody > tr > td > div').contains("Jormungandr");
     });
 
-    it.only('Should not be able to search by numbers', () => {
+    it('Should not be able to search by numbers', () => {
         cy.get('div.justify-content-between > label > input').type("10.05");
         cy.get('div.react-bootstrap-table > table > tbody > tr > td > div').should('have.length', 0);
     });
