@@ -121,6 +121,9 @@ jobs:
     needs: [build-front-end, run-backend-with-docker]
     steps:
       - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      
       - name: Run the front-end
         run: npm run start
         working-directory: smitearific_web_app
