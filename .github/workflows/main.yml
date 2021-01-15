@@ -31,7 +31,7 @@ jobs:
         run: mvn -B package --file pom.xml
       - uses: actions/upload-artifact@v2
         with:
-          name: Package
+          name: info
           path: smitearific_api/info/target/*.jar
         
   build-stats-api:
@@ -58,7 +58,7 @@ jobs:
         run: mvn -B package --file pom.xml
       - uses: actions/upload-artifact@v2
         with:
-          name: Package
+          name: stats
           path: smitearific_api/stats/target/*.jar
   
   run-backend-with-docker:
@@ -70,6 +70,16 @@ jobs:
         working-directory: smitearific_api
     steps:
       - uses: actions/checkout@v2
+      - name: Downaload info jar
+        uses: actions/download-artifact@v2
+        with:
+          working-directory: smitearific_api/info/target/
+          name: info
+      - name: Downaload stas jar
+        uses: actions/download-artifact@v2
+        with:
+          working-directory: smitearific_api/stats/target/
+          name: stats
       - name: Build Docker images
         run: docker-compose build
       - name: Run docker container
