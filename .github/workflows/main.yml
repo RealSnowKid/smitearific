@@ -7,6 +7,34 @@ on:
     branches: [ main ]
 
 jobs:
+  build-front-end:
+    name: Build the front-end
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: smitearific_web_app
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ui/node_modules
+            ~/.cache/Cypress
+            ${{ github.workspace }}/smitearific_web_app/.next/cache
+          key: |
+            ${{ runner.os }}-node-${{ hashFiles('**/ui/package-lock.json') }}
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+      
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build front-end
+        run: npm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: next
+          path: smitearific_web_app/.next
+        
   build-info-api:
     name: Build the Info API
     runs-on: ubuntu-latest
@@ -61,27 +89,89 @@ jobs:
           name: stats
           path: smitearific_api/stats/target/*.jar
   
-  run-backend-with-docker:
-    name: Runs the APIs and Database in a docker container
+#   run-backend-with-docker:
+#     name: Run the APIs and Database in a Docker container
+#     runs-on: ubuntu-latest
+#     env:
+#       DB_USERNAME: ${{ secrets.DB_USERNAME }}
+#       DB_PASS: ${{ secrets.DB_PASS }}
+#     needs: [build-info-api, build-stats-api]
+#     defaults:
+#       run:
+#         working-directory: smitearific_api
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Downaload info jar
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: info
+#           path: smitearific_api/info/target/
+
+#       - name: Downaload stas jar
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: stats
+#           path: smitearific_api/stats/target/
+      
+#       - name: Build Docker images
+#         run: docker-compose build
+      
+#       - name: Run docker container
+#         run: docker-compose up -d
+
+  run-e2e-tests:
+    name: Build Docker Image for backend, run front-end and run e2e Cypress tests
     runs-on: ubuntu-latest
-    needs: [build-info-api, build-stats-api]
-    defaults:
-      run:
-        working-directory: smitearific_api
+    env:
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_PASS: ${{ secrets.DB_PASS }}
+    needs: [build-front-end, build-info-api, build-stats-api]
     steps:
       - uses: actions/checkout@v2
+        
+      - name: Downaload front-end build
+        uses: actions/download-artifact@v2
+        with:
+          name: next
+          path: smitearific_web_app/.next/
+          
       - name: Downaload info jar
         uses: actions/download-artifact@v2
         with:
           name: info
           path: smitearific_api/info/target/
+
       - name: Downaload stas jar
         uses: actions/download-artifact@v2
         with:
           name: stats
           path: smitearific_api/stats/target/
+      
       - name: Build Docker images
         run: docker-compose build
+        working-directory: smitearific_api
+      
       - name: Run docker container
-        run: docker-compose -f docker-compose.yml -f secret.yml up -d
+        run: docker-compose up -d
+        working-directory: smitearific_api
         
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ui/node_modules
+            ~/.cache/Cypress
+            ${{ github.workspace }}/smitearific_web_app/.next/cache
+          key: |
+            ${{ runner.os }}-node-${{ hashFiles('**/ui/package-lock.json') }}
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+            - name: Downaload next build
+      - name: Install dependencies
+        run: npm install
+        working-directory: smitearific_web_app
+            
+      - name: Run the front-end and e2e tests
+        run: |
+          npm run start &
+          sleep 30
+          npm run test:ci
+        working-directory: smitearific_web_app
