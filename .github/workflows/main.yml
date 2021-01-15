@@ -19,7 +19,6 @@ jobs:
         with:
           path: ${{ github.workspace }}/smitearific_web_app/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
       
       - name: Install dependencies
         run: npm install
