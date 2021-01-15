@@ -144,11 +144,11 @@ jobs:
         run: npm install
         working-directory: smitearific_web_app
             
-      - name: Run the front-end
-        run: npm run start
+      - name: Run the front-end and e2e tests
+        run: |
+          npm run start &
+          sleep 30
+          npm run test:ci
         working-directory: smitearific_web_app
 
-      - name: Run Cypress e2e tests
-        run: npm run test:ci
-        working-directory: smitearific_web_app
     
