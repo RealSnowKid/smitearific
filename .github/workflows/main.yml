@@ -32,6 +32,7 @@ jobs:
       - run: mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
+          working-directory: smitearific_api/info
           name: Package
           path: staging
         
@@ -60,6 +61,7 @@ jobs:
       - run: mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
+          working-directory: smitearific_api/stats
           name: Package
           path: staging
   
