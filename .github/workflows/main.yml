@@ -121,6 +121,15 @@ jobs:
     needs: [build-front-end, run-backend-with-docker]
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ui/node_modules
+            ~/.cache/Cypress
+            ${{ github.workspace }}/smitearific_web_app/.next/cache
+          key: |
+            ${{ runner.os }}-node-${{ hashFiles('**/ui/package-lock.json') }}
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm install
       
