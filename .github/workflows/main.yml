@@ -73,13 +73,13 @@ jobs:
       - name: Downaload info jar
         uses: actions/download-artifact@v2
         with:
-          working-directory: smitearific_api/info/target/
           name: info
+          path: smitearific_api/info/target/
       - name: Downaload stas jar
         uses: actions/download-artifact@v2
         with:
-          working-directory: smitearific_api/stats/target/
           name: stats
+          path: smitearific_api/stats/target/
       - name: Build Docker images
         run: docker-compose build
       - name: Run docker container
