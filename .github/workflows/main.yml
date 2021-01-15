@@ -132,6 +132,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm install
+        working-directory: smitearific_web_app
       
       - name: Run the front-end
         run: npm run start
