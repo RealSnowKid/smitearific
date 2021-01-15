@@ -32,9 +32,8 @@ jobs:
       - run: mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
-          working-directory: smitearific_api/info
           name: Package
-          path: staging
+          path: smitearific_api/info
         
   build-stats-api:
     name: Build the Stats API
@@ -61,9 +60,8 @@ jobs:
       - run: mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
-          working-directory: smitearific_api/stats
           name: Package
-          path: staging
+          path: smitearific_api/stats
   
 #   run-backend-with-docker:
 #     name: Runs the APIs and Database in a docker container
