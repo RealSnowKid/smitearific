@@ -29,6 +29,11 @@ jobs:
 
       - name: Build the Info API with Maven
         run: mvn package
+      - run: mkdir staging && cp target/*.jar staging
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Package
+          path: staging
         
   build-stats-api:
     name: Build the Stats API
@@ -52,3 +57,11 @@ jobs:
 
       - name: Build the Stats API with Maven
         run: mvn package
+      - run: mkdir staging && cp target/*.jar staging
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Package
+          path: staging
+  
+#   run-backend-with-docker:
+#     name: Runs the APIs and Database in a docker container
