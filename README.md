@@ -1,5 +1,6 @@
 # SMITEARIFIC
 ![example workflow file path](https://github.com/RealSnowKid/smitearific/workflows/main/badge.svg)
+[![Smitearific](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/s6jrsq&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/s6jrsq/runs)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/85b6a8c26f304aadaa3cc3410f147a5b)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RealSnowKid/smitearific&amp;utm_campaign=Badge_Grade)
 > __SMITEARIFIC__ is a project, which is a part of my study programme in ICT at [Fontys University of Applied Sciences](https://fontys.edu/).
 ## About The Project
