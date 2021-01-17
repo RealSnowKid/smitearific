@@ -3,6 +3,10 @@ import Navbar from '../../components/Navbar.js';
 import Navigation from '../../components/Navigation';
 import rankItems from '../../components/rankItems';
 import menuItems from '../../components/menuItems';
+import LaneBadge from '../../components/badges/laneBadge';
+import RoleBadge from '../../components/badges/roleBadge';
+import PantheonBadge from '../../components/badges/pantheonBadge';
+import TypeBadge from '../../components/badges/typeBadge';
 import { Tabs, Tab } from 'react-bootstrap';
 import ScrollArrow from '../../components/scrollArrow.js';
 import GodsService from '../../services/GodsService';
@@ -10,23 +14,22 @@ import godInfoHelper from '../../helpers/godInfoHelper';
 
 function GodPage({ godData }) {
     const [godInfo, setGodInfo] = useState({});
-    const [damageType, setDamageType] = useState();
 
     useEffect(() => {
         setGodInfo(godData[0]);
     }, [godData[0].type])
 
-    function getAttackType(data) {
-        if (data != null) {
-            return (data.split(", ")[0]);
-        }
-    }
+    // function getAttackType(data) {
+    //     if (data != null) {
+    //         return (data.split(", ")[0]);
+    //     }
+    // }
 
-    function getDamageType(data) {
-        if (data != null) {
-            return (data.split(", ")[1]);
-        }
-    }
+    // function getDamageType(data) {
+    //     if (data != null) {
+    //         return (data.split(", ")[1]);
+    //     }
+    // }
 
     return (
         <>
@@ -44,11 +47,10 @@ function GodPage({ godData }) {
                             <h2 className="ml-6">{godInfo.title}</h2>
                         </div>
                         <div className="d-flex justify-content-between mt-4">
-                            <p><img className="type" src="https://i.imgur.com/4nSOAUv.png" /> {godInfo.lane != null ? godInfo.lane : "No Lane Assigned"}</p>
-                            <p><img className="type" src="https://i.imgur.com/zlZGWRs.png" /> {godInfo.role}</p>
-                            <p><img className="type" src="https://i.imgur.com/vISTzOG.png" /> {godInfo.pantheon}</p>
-                            <p><img className="type" src="https://i.imgur.com/hUrd9xJ.png" /> {getAttackType(godInfo.type)} </p>
-                            <p><img className="type" src="https://i.imgur.com/Utu3Irz.png" /> {getDamageType(godInfo.type)}</p>
+                            {LaneBadge(godInfo.lane)}
+                            {RoleBadge(godInfo.role)}
+                            {PantheonBadge(godInfo.pantheon)}
+                            {TypeBadge(godInfo.type)}
                         </div>
                     </div>
                 </div>
