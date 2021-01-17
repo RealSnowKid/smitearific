@@ -88,36 +88,6 @@ jobs:
         with:
           name: stats
           path: smitearific_api/stats/target/*.jar
-  
-#   run-backend-with-docker:
-#     name: Run the APIs and Database in a Docker container
-#     runs-on: ubuntu-latest
-#     env:
-#       DB_USERNAME: ${{ secrets.DB_USERNAME }}
-#       DB_PASS: ${{ secrets.DB_PASS }}
-#     needs: [build-info-api, build-stats-api]
-#     defaults:
-#       run:
-#         working-directory: smitearific_api
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: Downaload info jar
-#         uses: actions/download-artifact@v2
-#         with:
-#           name: info
-#           path: smitearific_api/info/target/
-
-#       - name: Downaload stas jar
-#         uses: actions/download-artifact@v2
-#         with:
-#           name: stats
-#           path: smitearific_api/stats/target/
-      
-#       - name: Build Docker images
-#         run: docker-compose build
-      
-#       - name: Run docker container
-#         run: docker-compose up -d
 
   run-e2e-tests:
     name: Build Docker Image for backend, run front-end and run e2e Cypress tests
